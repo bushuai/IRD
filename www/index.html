@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link rel="stylesheet" href="./assets/css/house.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+</head>
+
+<body class="page-login">
+<div class="page-form wrapper">
+    <div class="container">
+        <h1 class="text-center">智能小区信息管理系统</h1>
+        <div class="row">
+            <div class="col-md-4 col-md-offset-4">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <form action="customer.action?act=login" class="form" method="post">
+                            <div class="form-group">
+                                <label for="username" class="form-label">账号</label>
+                                <input class="form-control" type="text" name="username" id="username"
+                                       placeholder="Username">
+                            </div>
+                            <div class="form-group">
+                                <label for="password">密码</label>
+                                <input class="form-control" type="password" name="password" id="password"
+                                       placeholder="Password">
+                            </div>
+                            <div class="form-group">
+                                <label for="usertype">用户类型</label>
+                                <select class="form-control" id="usertype">
+                                    <option value="none">请选择</option>
+                                    <option value="admin">管理员</option>
+                                    <option value="customer">小区业主</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <button type="button" class="btn btn-block btn-success btn-fill" id="btn-login">登录
+                                </button>
+                            </div>
+
+                            <hr>
+                            <div class="help-block text-center">
+                                还没有账号？赶块<a href="#">注册</a>一个吧。
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="./assets/js/jquery.js"></script>
+
+<script type="text/javascript">
+    $( '#btn-login' ).on( 'click', function () {
+        var $loginId  = $( '#username' ).val();
+        var $password = $( '#password' ).val();
+        verify( $loginId, $password );
+    } );
+
+    function verify( loginId, password ) {
+        if ( !!loginId && !!password ) {
+            $.ajax( {
+                url       : 'customer.action?act=login',
+                type      : 'post',
+                dataType  : 'json',
+                data      : {
+                    'loginId' : loginId,
+                    'password': password
+                },
+                success   : function ( resp ) {
+                    if ( resp.status == 'success' ) {
+                        location.href = "admin/dashboard.jsp";
+                    } else {
+
+                    }
+                },
+                error     : function () {
+
+                },
+                beforeSend: function () {
+
+                }
+            } );
+        } else {
+            alert( 'un&pwd invaild' );
+        }
+    }
+</script>
+</body>
+
+</html>

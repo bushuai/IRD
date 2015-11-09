@@ -1,0 +1,347 @@
+/*------------------------------------------
+RESET
+------------------------------------------*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/*------------------------------------------
+COMMON
+------------------------------------------*/
+
+html {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    font: 12px "arial", "Microsoft YaHei";
+    height: 100%;
+    background: url("../images/bg3.jpg") fixed;
+}
+
+a {
+    color: #888;
+}
+
+a:visited {
+    color: #ccc;
+}
+
+a:link {
+    color: #888;
+}
+
+a:focus, a:hover {
+    color: red;
+    text-decoration: none;
+}
+
+/*------------------------------------------
+MAIN PAGE
+------------------------------------------*/
+#wrapper {
+    width: 100%;
+    height: 100%;
+    background: #ccc;
+    margin: auto;
+    overflow: hidden;
+}
+
+nav {
+    background: #ccc;
+    height: 50px;
+}
+
+nav ul {
+    float: right;
+}
+
+nav ul li, nav .logo {
+    display: inline-block;
+    line-height: 50px;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    line-height: 50px;
+    display: inline-block;
+    height: inherit;
+    text-decoration: none;
+}
+
+#banner {
+    height: 700px;
+}
+
+#banner button {
+    padding: 14px 60px;
+}
+
+#banner .inner {
+    max-width: 300px;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+    top: 200px;
+}
+
+#banner .inner p {
+    margin: 20px;
+    line-height: 20px;
+}
+
+#banner .inner .more {
+    margin-top: 260px;
+}
+
+#banner button {
+    border: none;
+    background: #333;
+    color: #eee;
+    padding: 15px;
+}
+
+/*------------------------------------------
+LOGIN PAGE
+------------------------------------------*/
+
+body.page-login {
+    background-image: url("../images/bg3.jpg");
+    background-size: cover;
+}
+
+.page-form {
+    position: relative;
+    top: 120px;
+}
+
+.page-form {
+    color: #fff;
+    text-shadow: 2px 4px 2px #000;
+}
+
+.page-form a{
+    color:#fff;
+}
+.page-form .help-block {
+    color: #fff;
+}
+
+.page-form .panel {
+    border:none;
+    background-color: rgba(22, 40, 22, 0.8);
+}
+.page-form .form-control{
+    background-color:#fff;
+}
+/*------------------------------------------
+HOME PAGE
+------------------------------------------*/
+
+#sidebar {
+    width: 230px;
+    height: 100%;
+    background: rgba(22, 31, 22, 0.8);
+    position: fixed;
+    text-align: center;
+    padding: 50px 0;
+    color: #fafafa;
+}
+#sidebar .profile,#sidebar ul{
+	padding:50px 0;
+}
+
+#sidebar button {
+    text-align: center;
+    background: none;
+    border: none;
+}
+
+#sidebar footer {
+   position:relative;
+   margin-top:50px;
+}
+
+#sidebar-main {
+    padding: 50px 0;
+}
+
+#sidebar-main ul {
+}
+
+#sidebar ul li {
+    margin-bottom: 10px;
+    line-height: 40px;
+    height: 40px;
+}
+
+#sidebar nav ul li:hover {
+    background: #ccc;
+}
+
+#sidebar ul li a {
+    display: block;
+    line-height: inherit;
+
+    height: inherit;
+}
+
+#sidebar img.avator {
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+#sidebar hr {
+    border-top: 1px solid #443636;
+}
+
+/*------------------------------------------
+HOME PAGE  MAIN
+------------------------------------------*/
+
+/*#main{
+    width:600px;
+    height:100%;
+    overflow: hidden;
+    margin-left:280px;
+    position: relative;
+    margin:0 auto;
+}*/
+#main {
+    text-align: center;
+}
+
+#main .details {
+    padding-top: 20px;
+    background-color: rgba(22, 31, 22, 0.8);
+    box-shadow: 1px 1px 5px #000;
+    margin: 50px 0;
+    display: none;
+}
+
+.details-main {
+    margin-top: 20px;
+    text-align: center;
+    height: inherit;
+    overflow: hidden;
+    background: rgba(250, 244, 244, 1);
+    color: #000;
+}
+
+#main .details-main table tr td {
+    line-height: 40px;
+    height: 40px;
+}
+
+.modal .modal-dialog {
+    width: 400px;
+}
+
+/*------------------------------------------
+LOADING
+------------------------------------------*/
+
+#loading-modal {
+    height: 100%;
+    width: 100%;
+    z-index: 1000;
+    /*background: rgba(20, 22, 34, 0.8);*/
+    position: absolute;
+    display: none;
+}
+
+.loading {
+    z-index: 101;
+    width: 80px;
+    height: 40px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -55px;
+    margin-top: -20px;
+}
+
+.loading span {
+    display: inline-block;
+    width: 8px;
+    height: 100%;
+    border-radius: 4px;
+    background: lightgreen;
+    -webkit-animation: load 1s ease infinite;
+}
+
+@-webkit-keyframes load {
+    0%, 100% {
+        height: 40px;
+        background: lightgreen;
+    }
+    50% {
+        height: 70px;
+        margin: -15px 0;
+        background: lightblue;
+    }
+}
+
+.loading span:nth-child(2) {
+    -webkit-animation-delay: 0.2s;
+}
+
+.loading span:nth-child(3) {
+    -webkit-animation-delay: 0.4s;
+}
+
+.loading span:nth-child(4) {
+    -webkit-animation-delay: 0.6s;
+}
+
+.loading span:nth-child(5) {
+    -webkit-animation-delay: 0.8s;
+}
